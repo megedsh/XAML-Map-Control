@@ -6,6 +6,8 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using MapControl.UiTools;
+using Shp.WPF;
 
 namespace SampleApplication
 {
@@ -28,9 +30,21 @@ namespace SampleApplication
         public MainWindow()
         {
             InitializeComponent();
-
+            addShpLayer();
             AddBingMapsLayers();
             AddTestLayers();
+        }
+
+        private void addShpLayer()
+        {
+            mapLayersMenuButton.MapLayers.Add(new MapLayerItem
+            {
+                Text = "Bing Maps Road",
+                Layer = new ShpTileLayer
+                {
+                    File = "countries.shp"
+                }
+            });
         }
 
         partial void AddBingMapsLayers();

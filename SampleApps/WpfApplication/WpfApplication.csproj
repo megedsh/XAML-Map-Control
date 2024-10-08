@@ -6,6 +6,7 @@
         <RootNamespace>SampleApplication</RootNamespace>
         <AssemblyTitle>XAML Map Control WPF Sample Application</AssemblyTitle>
         <DefineConstants>WPF</DefineConstants>
+        <SignAssembly>False</SignAssembly>
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,6 +20,7 @@
     <ItemGroup>
         <ProjectReference Include="..\..\MapControl\WPF\MapControl.WPF.csproj" />
         <ProjectReference Include="..\..\MapUiTools\WPF\MapUiTools.WPF.csproj" />
+        <ProjectReference Include="..\..\Shp\WPF\Shp.WPF.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -26,11 +28,17 @@
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
         <Content Include="..\Shared\etna.kml" Link="etna.kml">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)'=='net48'">
         <Reference Include="System.Net.Http" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\Shared\countries.shp" Link="countries.shp">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 </Project>

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-windows;net462</TargetFrameworks>
+		<UseWPF>true</UseWPF>
+		<DefineConstants>WPF</DefineConstants>
+		<SignAssembly>False</SignAssembly>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NetTopologySuite.IO.Esri.Shapefile" Version="1.2.0" />
+		<PackageReference Include="NetTopologySuite.IO.VectorTiles" Version="1.1.0" />
+		<PackageReference Include="NetTopologySuite.IO.VectorTiles.Mapbox" Version="1.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\MapControl\WPF\MapControl.WPF.csproj" />
+	</ItemGroup>
+</Project>

@@ -9,6 +9,7 @@
         <PackageId>XAML.MapControl.MapProjections.WPF</PackageId>
         <Title>$(AssemblyTitle)</Title>
         <Description>Map projections library for XAML Map Control, based on ProjNET4GeoAPI</Description>
+	    <SignAssembly>False</SignAssembly>
     </PropertyGroup>
 
     <ItemGroup>

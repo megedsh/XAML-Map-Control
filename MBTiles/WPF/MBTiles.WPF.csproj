@@ -9,6 +9,7 @@
         <PackageId>XAML.MapControl.MBTiles.WPF</PackageId>
         <Title>$(AssemblyTitle)</Title>
         <Description>MBTiles library for XAML Map Control</Description>
+	    <SignAssembly>False</SignAssembly>
     </PropertyGroup>
 
     <ItemGroup>
